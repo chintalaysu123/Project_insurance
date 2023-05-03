@@ -1,0 +1,55 @@
+.login {
+    height: 100%;
+    width: 100%;
+
+    .ftco-section {
+        .wrap {
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+
+            .login-wrap {
+                width: 50%;
+                position: relative;
+
+                .social-media {
+                    position: relative;
+                    width: 100%;
+
+                    .social-icon {
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        background: transparent;
+                        border: 1px solid rgba(0, 0, 0, 0.05);
+                        font-size: 16px;
+                        margin-right: 5px;
+                        border-radius: 50%;
+                    }
+
+                    .social-icon:hover,
+                    .social-icon:focus {
+                        background: #007bff;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .image {
+            width: 50%;
+            height: 430px;
+            background-image: url("../../../assets/istockphoto-1199060494-612x612.jpg");
+        }
+    }
+}
+
+.form-group .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 700;
+}

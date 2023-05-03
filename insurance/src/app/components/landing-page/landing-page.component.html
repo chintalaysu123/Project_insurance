@@ -1,0 +1,70 @@
+<div class="landing-page">
+    <nav>
+        <div class="logo">ESU Insurance</div>
+        <div class="navLinks">
+            <ul>
+                <li><a href="#" (click)="goToLogin()">Login / Sign Up</a></li>
+                <li><a href="#" (click)="goToQuote()">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div *ngIf="currentPage === 'InfoPage'" class="caro-images">
+        <section class="carousel" aria-label="Gallery">
+            <ol class="carousel__viewport">
+                <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+                        <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+                    </div>
+                </li>
+                <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+                </li>
+            </ol>
+            <aside class="carousel__navigation">
+                <ol class="carousel__navigation-list">
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+                    </li>
+                </ol>
+            </aside>
+        </section>
+    </div>
+    <div *ngIf="currentPage === 'InfoPage'" id="scroll-container">
+        <div id="scroll-text">
+            Insurance is a way to manage your risk. When you buy insurance,you purchase protection against unexpected
+            financial losses.The insurance company pays you or someone you choose if something bad happens to you.If you
+            have no insurance and an accidenthappens, you may be responsible for all related costs. Having the right
+            insurance for the risks you may face can make a big difference in your life. People get insurance not only
+            to help with risks from unexpected events but also to help pay for routine things, such as annual medical
+            checkups and dental visits. In addition, insurance companies negotiate discounts with health care providers,
+            so their customers pay those discounted rates
+        </div>
+    </div>
+    <div *ngIf="currentPage === 'LoginPage'" style="height: 70%;">
+        <app-login></app-login>
+    </div>
+    <div *ngIf="currentPage === 'QuotePage'" style="height: 70%; color: black;">
+        <app-quote></app-quote>
+    </div>

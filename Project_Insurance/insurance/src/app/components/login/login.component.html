@@ -1,0 +1,174 @@
+<div class="login">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5" style="margin-bottom: 0px !important;">
+                    <h2>Login</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="height: 80%;">
+                <div class="col-md-12 col-lg-10" style="height: 100%;">
+                    <div class="wrap d-md-flex" style="height: 100%;">
+                        <div class="image"></div>
+                        <div id="login" class="login-wrap p-4 p-md-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4" style="color:black;">Sign In</h3>
+                                </div>
+                                <div class="w-100">
+                                    <p class="social-media d-flex justify-content-end">
+                                        <a href="#"
+                                            class="social-icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-facebook"></span>
+                                        </a>
+                                        <a href="#"
+                                            class="social-icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-twitter"></span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <form id="sign-in-form">
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="username" style="color: black;">Username</label>
+                                        <input id="username-input" type="text" class="form-control"
+                                            placeholder="Username" required />
+                                    </div>
+                                    <div id="password" class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="password" style="color: black;">Password</label>
+                                        <input id="password-input" type="text" class="form-control"
+                                            placeholder="Password" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <button id="proceed-button" type="submit"
+                                            class="form-control btn btn-primary rounded submit px-3"
+                                            (click)="verifyEmail()">
+                                            Proceed
+                                        </button>
+                                        <button id="login-button" type="submit"
+                                            class="form-control btn btn-primary rounded submit px-3"
+                                            (click)="performLogin()">
+                                            Login
+                                        </button>
+                                    </div>
+                                </form>
+                                <p class="text-center" style="color: black;">Not a member ?
+                                    <a data-toggle="tab" href="#" style="margin-left: 5px;"
+                                        (click)="activateRegisterForm()">Sign up</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="update-password" class="login-wrap p-4 p-md-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4" style="color:black;">Update Password</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <form id="update-password-form">
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="username" style="color: black;">Passowrd</label>
+                                        <input id="update-username-input" type="password" formControlName="username"
+                                            class="form-control" required />
+                                    </div>
+                                    <div id="password" class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="password" style="color: black;">Confirm
+                                            Password</label>
+                                        <input id="confirm-password-input" type="password" formControlName="password"
+                                            class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <button id="proceed-button" type="submit"
+                                            class="form-control btn btn-primary rounded submit px-3"
+                                            (click)="updatePassword()">
+                                            Create
+                                        </button>
+                                        <button id="login-button" type="submit"
+                                            class="form-control btn btn-primary rounded submit px-3"
+                                            (click)="showLoginForm()">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="signup" class="login-wrap p-4 p-md-5" style="height: 430px; overflow-y: auto;">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4" style="color:black;">Sign Up</h3>
+                                </div>
+                            </div>
+                            <div style="overflow-y: auto;">
+                                <form id="sign-up-form">
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="firstname" style="color: black;">First Name</label>
+                                        <input id="firstname-input" type="text" class="form-control"
+                                            placeholder="First Name" required />
+                                    </div>
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="lastname" style="color: black;">Last Name</label>
+                                        <input id="lastname-input" type="text" class="form-control"
+                                            placeholder="Last Name" required />
+                                    </div>
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="address" style="color: black;">Address</label>
+                                        <textarea id="address-input" type="text" class="form-control"
+                                            placeholder="Address" required></textarea>
+                                    </div>
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="age" style="color: black;">Age</label>
+                                        <input id="age-input" type="number" class="form-control" placeholder="Age"
+                                            required />
+                                    </div>
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="email" style="color: black;">Email</label>
+                                        <input id="email-input" type="text" class="form-control" placeholder="Email"
+                                            required />
+                                    </div>
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="phoneNumber" style="color: black;">Phone
+                                            Number</label>
+                                        <input id="phone-number-input" type="number" class="form-control"
+                                            placeholder="Phone Number" required />
+                                    </div>
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="insuranceType" style="color: black;">Insurance
+                                            Type</label>
+                                        <select class="form-control" id="insurance-type-select">
+                                            <option value="Auto Insurance">Auto Insurance</option>
+                                            <option value="Homeowners Insurance">Homeowners Insurance</option>
+                                            <option value="Life Insurance">Life Insurance</option>
+                                            <option value="Health Insurance">Health Insurance</option>
+                                            <option value="Disability Insurance">Disability Insurance</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group-mb-3" style="margin-bottom: 1em;">
+                                        <label class="label" for="message" style="color: black;">Message</label>
+                                        <textarea id="message-input" type="text" class="form-control"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="form-group"
+                                        style="display: flex; align-items: center; justify-content: center;">
+                                        <button id="proceed-button" type="submit" style="margin: 5px;"
+                                            class="form-control btn btn-success rounded submit px-3"
+                                            (click)="createUser()">
+                                            <span class="fa fa-check-circle"></span>
+                                            Submit
+                                        </button>
+                                        <button id="login-button" type="button" style="margin: 5px;"
+                                            class="form-control btn btn-danger rounded submit px-3"
+                                            (click)="showLoginForm()">
+                                            <span class="fa fa-times-circle"></span>
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
